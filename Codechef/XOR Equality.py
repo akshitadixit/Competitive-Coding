@@ -1,10 +1,21 @@
-# by laws of xor algebra:
-# x^(x+1)^(x+2)^(x+3) = 0
-# now x = 2k for the above to hold true i.e. x%2==0
+m = 1000000007 #the modulo
+def ans(x, n):
+    a = 1
+    x = x % m
 
-m = 1000000007
-for _ in range(int(input())):
-	n = int(input())
-	n = 2**n - 1
-	r = n//2 +1 # no. of multiples of 4
-	print(r%m)
+    if x == 0:
+        return 0
+        
+	# check if n is odd then multiply x with result
+    while n > 0:
+        if ((n & 1) == 1):
+            a = (a * x) % m
+		# n to be even now
+        n = n >> 1
+        x = (x**2) % m
+
+    return a
+    
+for i in range(int(input())):
+    n = int(input()) - 1
+    print(ans(2, n))
