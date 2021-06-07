@@ -1,8 +1,15 @@
 #    Possible better approach:
 #    Use collections.Counter .
 #    Use the fact that dict1.keys() & dict2.keys() returns the keys common to dict1 and dict2
-#    Use the fact that [x] * n gives an array [x, x, ..., x] of length n
-#    Use the extend method of lists
+
+'''
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        c1 = collections.Counter(nums1)
+        c2 = collections.Counter(nums2)
+        c3 = c1 & c2
+        return list(c3.elements())
+'''
 
 
 class Solution:
