@@ -18,3 +18,11 @@ def find(arr):
 
 arr = list(map(int, input().split()))
 print(find(arr))
+
+from collections import Counter
+def find2(arr):
+    c = Counter(arr)
+    return (c.most_common()[0][0])
+
+def find3(arr):
+    
