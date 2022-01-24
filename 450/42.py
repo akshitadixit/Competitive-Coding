@@ -1,6 +1,9 @@
 '''
-reverse a linked list
+reverse a linked list in groups of 'k' elements
 '''
+
+
+from email.mime.text import MIMEText
 
 
 class Node:
@@ -45,16 +48,21 @@ class LinkedList:
             curr = curr.next
         print()
 
-    def reverse(self):
-        # not working properly
+    def reverse(self, head, k):
+        ctr = 0
+        curr = head
+        next = None
         prev = None
-        curr = self.head.next
-        while curr != None:
+        while curr != None and ctr < k:
             next = curr.next
             curr.next = prev
             prev = curr
             curr = next
-        self.head = prev
+            ctr += 1
+        if next != None:
+            head.next = self.reverse(next, k)
+
+        return prev
 
 
 arr = [1, 2, 3, 4, 5, 6]
@@ -62,13 +70,6 @@ ll = LinkedList()
 for x in arr:
     ll.insert(x)
 
-curr = ll.head.next
-ll_rev = LinkedList()
-for i in range(ll.len):
-    ll_rev.insert(curr.data)
-    curr = curr.next
-
 ll.print()
-ll_rev.print()
-ll.reverse()
+ll.head = ll.reverse(ll.head.next, 4)
 ll.print()
