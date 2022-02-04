@@ -2,10 +2,6 @@
 reverse a linked list in groups of 'k' elements
 '''
 
-
-from email.mime.text import MIMEText
-
-
 class Node:
     def __init__(self, val=0):
         self.data = val
