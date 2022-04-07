@@ -10,6 +10,8 @@ Expected Auxiliary Space: O(1)
 # for median, exactly n/2 ele should be less than median
 
 from bisect import bisect_right as upper_bound
+
+
 def find_median(arr):
     # binary search in the space 1 - 10^9 or min and max from the arr
     # find a mid that has exactly n//2 numbers less than it
@@ -56,5 +58,5 @@ def binaryMedian(m, r, d):
 # Driver code
 r, d = 3, 3
 
-m = [[1, 3, 5], [2, 6, 9], [3, 6, 9]]
+m = [[1, 3, 6], [2, 6, 9], [3, 6, 9]]
 binaryMedian(m, r, d)

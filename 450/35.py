@@ -4,6 +4,7 @@ elements in the subsequence are consecutive integers,
 the consecutive numbers can be in any order. All +ve integers.
 '''
 
+
 def longest_subseq(arr):
     arr.sort()
     arr = list(set(arr))
@@ -30,5 +31,5 @@ def longest_subseq(arr):
     return ctr
 
 
-arr = [8, 9, 1, 2, 3, 1]
+arr = [2, 6, 1, 9, 4, 5, 3]
 print(longest_subseq(arr))

@@ -9,7 +9,6 @@ def factorial_large(n):
     res = list(map(int, str(n)))
 
     while n > 1:
-        n -= 1
         temp = []
         carry = 0
         for x in res:
@@ -23,6 +22,7 @@ def factorial_large(n):
 
         temp.extend(list(map(int, list(str(carry)[::-1]))))
         res = temp
+        n -= 1
 
     return "".join(map(str, res[::-1])).lstrip('0')
 

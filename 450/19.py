@@ -4,6 +4,9 @@ and choosing a different day in the future to sell that stock.
 '''
 
 def max_profit(arr):
+    # fails 
+    # arr = [2,4,1]
+    # correct ans = 2, o/p = 0
     mn = min(arr)
     mx = max(arr[arr.index(mn):])
     return mx-mn

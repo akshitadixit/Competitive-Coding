@@ -4,6 +4,10 @@ of size m. Task is to check whether a2[] is a subset of
 a1[] or not. Both the arrays can be sorted or unsorted. It may be assumed that elements in both array are distinct.
 '''
 
+def subset_hashtable(arr1, arr2):
+    # time = m+n
+    # space = m
+    pass
 
 def check_subset(arr1, arr2):
     # O(n) time and O(1) space

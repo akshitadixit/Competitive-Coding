@@ -4,6 +4,15 @@ Find the elements that are common in all three arrays.
 Note: can you take care of the duplicates without using any additional Data Structure?
 '''
 
+def  set_method(a, b, c):
+    seen = set()
+    for x in a:
+        if x not in seen:
+            seen.add(x)
+        else:
+            print(x, end=' ')
+    # repeat this for the other 2
+
 
 def find_common(a, b, c):
     for x in a:

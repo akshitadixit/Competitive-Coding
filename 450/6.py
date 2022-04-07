@@ -48,8 +48,8 @@ def sort_np2(arr):
             hi -= 1
     return arr
 
-arr = list(map(int, input().split()))
-''' -12, 11, -13, -5, 6, -7, 5, -3, -6 0 '''
+arr = list(map(int, input().split(',')))
+''' -12, 11, -13, -5, 6, -7, 5, -3, -6, 0, 1 '''
 print(sort_np2(arr))
 print(sort_np1(arr))
 print(sort_np_preferred(arr))

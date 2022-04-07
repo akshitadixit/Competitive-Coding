@@ -11,5 +11,5 @@ def dupli(arr):
         if arr[abs(x)]>0:
             return abs(x)
 
-arr = list(map(int, input().split()))
+arr = list(map(int, input().split(',')))
 print(dupli(arr))
